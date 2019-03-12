@@ -1,5 +1,7 @@
 import psutil
 import time
+listf=[]
+listf.append('chrome.exe')
 for proc in psutil.process_iter():
-    if 'chrome.exe' in proc.name():
+    if listf() in proc.name():
         print(proc.name() + " handles:" + str(proc.num_handles()))  
