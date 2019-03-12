@@ -1,0 +1,5 @@
+import psutil
+import time
+for proc in psutil.process_iter():
+    if 'chrome.exe' in proc.name():
+        print(proc.name() + " handles:" + str(proc.num_handles()))  
